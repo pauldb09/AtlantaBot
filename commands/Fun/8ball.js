@@ -26,7 +26,7 @@ class Eightball extends Command {
 		const answerNO = parseInt(Math.floor(Math.random() * 10), 10);
 		const answer = message.translate(`fun/8ball:RESPONSE_${answerNO + 1}`);
 
-		message.channel.send(`${message.author.username}, ${answer}`);
+		message.channel.send(`${Discord.Util.removeMentions(message.author.username)}, ${answer}`);
 	}
 
 }
